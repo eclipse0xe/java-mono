@@ -2,16 +2,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>com.m1</groupId>
 	<artifactId>agent</artifactId>
 	<version>1.0.0</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
+	<name>Librairy :: Parent</name>
   
     <modules>
         <module>R1</module>
         <module>R2</module>
     </modules>
+	
+	<profiles>
          <profile>
             <id>sonar</id>
             <properties>
@@ -41,5 +43,6 @@
                 </plugins>
             </build>
         </profile>
+		</profiles>
  
 </project>

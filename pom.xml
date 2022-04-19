@@ -22,7 +22,26 @@
                 <sonar.projectKey>eclipse0xe_java-mono</sonar.projectKey>
                 <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
             </properties>
-            
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonarsource.scanner.maven</groupId>
+                        <artifactId>sonar-maven-plugin</artifactId>
+                        <version>${sonar.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sonar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
 		</profiles>
  
